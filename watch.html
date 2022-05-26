@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Video - YTUnblocked</title>
+    <link rel="stylesheet" href="styles/__main.css">
+    <link rel="stylesheet" href="styles/watch.css">
+    <script src="scripts/__main.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-infobutton" onclick="showMenu();">
+            <img class="icon" src="assets/icons/menu.png" alt="menu" draggable="false">
+        </div>
+        <div style="padding-left: 32px;"></div>
+        <a href="index.html">
+            <img style="height: 46px; margin-top: 3px;" src="assets/ytimg.png" alt="menu" draggable="false">
+        </a>
+        <div style="padding-left: 42px;"></div>
+        <input id="searchBox" placeholder="Search Disabled" disabled>
+        <div class="header-button">
+            <img src="/assets/icons/search.png" alt="Search" draggable="false">
+        </div>
+    </div>
+    <div class="menu" id="menuObj" style="display: none;">
+        <h2>YoutubeUNBLOCKED</h2>
+        By InfinityAtom
+        <hr>
+        <h3>Video Credits</h3>
+        <hr>
+        <ul>
+            <li>Mumbo Jumbo</li>
+            <li>Lynix</li>
+            <li>Mrwhosetheboss</li>
+            <li>Tom Scott</li>
+            <li>Leviathan</li>
+        </ul>
+    </div>
+    <div class="bodyArea">
+      <video controls controlsList="nodownload" oncontextmenu="return false;">
+        <source id="videoE" src="">
+      </video><br>
+      <h2 id="videoTitle">This is a video title</h2>
+      <hr>
+      <img width="46" id="channelLogo" src=""><span id="channel">Person</span>
+      <hr>
+      <div id="description">
+          <pre id="descriptionText">
+            Description
+          </pre>
+      </div>
+    </div>
+    <script src="scripts/watch.js"></script>
+</body>
+</html>

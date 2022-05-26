@@ -1,0 +1,18 @@
+.videoThumb {
+    border: 1px solid rgb(255, 255, 255);
+    width: 320px;
+    padding:  3px;
+    cursor: pointer;
+    margin: 3px;
+    overflow: hidden;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.bodyArea {
+    display: flex;
+    flex-wrap: wrap;
+}

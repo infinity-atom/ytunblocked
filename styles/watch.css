@@ -1,0 +1,20 @@
+video {
+  width: 70%;
+}
+
+#channelLogo {
+  width: 46px;
+  border-radius: 50%;
+}
+
+#channel {
+  font-size: 20pt;
+  margin-left: 16px;
+  vertical-align: top;
+}
+
+pre {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: scroll;
+  height: 500px;
+}
