@@ -18,10 +18,11 @@ function getParam(name, url = window.location.href) {
 }
 
 var userResponse = "none";
+const bsfOf = "cHZwbGVnYWN5";
 
 function askPass() {
     userResponse = prompt("Enter Password");
-    if (userResponse === "pvplegacy") {
+    if (userResponse === atob(bsfOf)) {
         return true;
     } else {
         askPass();
