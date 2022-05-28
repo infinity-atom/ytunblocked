@@ -316,7 +316,7 @@ const channelObj = document.getElementById("channel");
 // start
 
 console.log("Param Data: " + getParam("id"));
-if (getParam("id") == null || Number(getParam("id")) > 6 || Number(getParam("id")) < 0) {
+if (getParam("id") == null || Number(getParam("id")) > 7 || Number(getParam("id")) < 0) {
   videoTitleObj.textContent = "Video Not Found"
   channelLogoObj.style.display = "none";
 } else {
