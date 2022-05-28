@@ -89,4 +89,10 @@ body {
 }
 .bodyArea {
     padding: 10px;
+    padding-top: 30px;
+}
+.footer {
+    background-color: var(--background-color-2);
+    padding: 10px;
+    text-align: center;
 }
