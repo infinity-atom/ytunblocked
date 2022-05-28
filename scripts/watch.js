@@ -233,7 +233,53 @@ const videoDesc = [
   I really love to chug jug with you
   We can be pro Fortnite gamers
   
-  #1VictoryRoyale`
+  #1VictoryRoyale`,
+  `Heya there, all! In this video, I make a game with Microsoft PowerPoint - the most powerful game engine of all time xD
+
+Find the SQUARES ALBUM with these links below! :D
+Spotify – https://open.spotify.com/artist/3EEi7...
+Apple Music – https://music.apple.com/artist/154554...
+SoundCloud – https://soundcloud.com/icoso
+YouTube - https://www.youtube.com/playlist?list... 
+
+-=Social Media=-
+Discord - https://discord.gg/pEBzR2Jk4F 
+Patreon - https://www.patreon.com/icoso
+Twitter - https://twitter.com/icoso_games
+Soundcloud - https://soundcloud.com/icoso
+Itch.io - https://icoso.itch.io/ 
+Instagram - https://www.instagram.com/icoso_games/ 
+
+Please be sure to check out my second channel, too! :D https://www.youtube.com/channel/UC40t...
+
+-=Chapters=-
+[00:00] - Weird Intro
+[00:22] - Actual Intro
+[00:50] - Tutorial
+[01:29] - Gameplay
+[05:12] - End Card
+
+-=Music=-
+Green Thursdays by Icoso (me!)
+https://www.youtube.com/watch?v=9diF_...
+
+Reset by Icoso (me again!)
+https://www.youtube.com/watch?v=FmULf...
+
+-=About Icoso=-
+Hey! I’m Icoso, a solo indie game developer with a passion for creating games people like to play! For my projects, I program all of the code, create all of the ‘art’, and compose all of the music and sound effects! I have lots of fun putting together my games and I also enjoy connecting with the indie game development community! There’s a lot of awesome people out there and I hope you can be the next one that messages me to say hi! I really love knowing what people are working on and seeing updates through gifs, screenshots, development builds, and full releases! Please don’t hesitate to ask me anything or share any of your awesome work – I’d love to be a part of it! :D
+
+-=Programs in Use=-
+Game Engine – Unity3D https://unity.com/ 
+Pixel Art – Aseprite https://www.aseprite.org/ 
+Music – FL Studio https://www.image-line.com/ 
+Sound Effects – Bfxr https://www.bfxr.net/ 
+Audio Recording – Audacity https://www.audacityteam.org/ 
+Video Editing – Adobe After Effects CC https://www.adobe.com/products/aftere... 
+
+Thank you for being a part of my game development journey, and I’ll see you in the next video! :D
+
+#gamedev #indiedev #indiegamedev #indiegame #indiegames #powerpoint #gamedevelopment`
 ];
 
 const videoTitle = [
@@ -243,7 +289,8 @@ const videoTitle = [
   `How THIS instagram story kills your phone.`,
   `Five Things You Can't Do On British Television`,
   `2b2t's Nether World Border Has Been REACHED (30 Million Minecraft Blocks)`,
-  `Chug Jug With You - Parody of American Boy (Number One Victory Royale)`
+  `Chug Jug With You - Parody of American Boy (Number One Victory Royale)`,
+  `Making a GAME in POWERPOINT!`
 ];
 
 const videoMaker = [
@@ -253,7 +300,8 @@ const videoMaker = [
   `Mrwhosetheboss`,
   `Tom Scott`,
   `FitMC`,
-  `Leviathan`
+  `Leviathan`,
+  `Icoso`
 ];
 
 const descTextObj = document.getElementById("descriptionText");
