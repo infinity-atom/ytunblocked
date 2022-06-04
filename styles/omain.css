@@ -96,3 +96,66 @@ body {
     padding: 10px;
     text-align: center;
 }
+
+/* DIALOGS */
+
+.dialog-background, .dbashown {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.807);
+    z-index: 1000;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+}
+
+.dialog-body, .dbshown {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(51, 51, 51);
+    z-index: 1001;
+    color: rgb(255, 255, 255);
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    border-radius: 7px;
+    padding: 3px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.dbahidden, .dbhidden {
+    display: none;
+}
+
+#authpassword {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+#authbutton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+#authbutton:hover {
+    padding: 5px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    margin-top: 5px;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+}

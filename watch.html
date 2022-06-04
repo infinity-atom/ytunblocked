@@ -11,12 +11,19 @@
     <script src="./scripts/omain.js"></script>
 </head>
 <body>
+    <div id="dba" class="dialog-background dbahidden"></div>
+    <div id="db" class="dialog-body dbhidden">
+        <h2>UnblockedAUTH</h2>
+        <span>Please type the password to enter the site.</span>
+        <input type="password" id="authpassword"><br>
+        <input type="button" onclick="submitPassword();" id="authbutton" value="Submit">
+    </div>
     <div class="header">
         <div class="header-infobutton" onclick="showMenu();">
             <img class="icon" src="assets/icons/menu.png" alt="menu" draggable="false">
         </div>
         <div style="padding-left: 32px;"></div>
-        <a href="index.html">
+        <a id="linkI" href="index.html">
             <img style="height: 46px; margin-top: 3px;" src="assets/ytimg.png" alt="menu" draggable="false">
         </a>
         <div style="padding-left: 42px;"></div>
@@ -53,28 +60,62 @@
     <div class="footer">
         <img id="videoData" src="https://img.shields.io/badge/Videos-0-informational" draggable="false">
     </div>
+</body>
 
-    <script>
-        var outp = "n";
-        function readTextFile(file)
+<script>
+    var outp = "n";
+    function readTextFile(file)
+    {
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function ()
         {
-            var rawFile = new XMLHttpRequest();
-            rawFile.open("GET", file, false);
-            rawFile.onreadystatechange = function ()
+            if(rawFile.readyState === 4)
             {
-                if(rawFile.readyState === 4)
+                if(rawFile.status === 200 || rawFile.status == 0)
                 {
-                    if(rawFile.status === 200 || rawFile.status == 0)
-                    {
-                        outp = rawFile.responseText;
-                        
-                    }
+                    outp = rawFile.responseText;
+                    
                 }
             }
-            rawFile.send(null);
         }
-        readTextFile("videos.txt");
-        document.getElementById("videoData").src = "https://img.shields.io/badge/Videos-" + outp + "-informational";
-    </script>
-</body>
+        rawFile.send(null);
+    }
+    readTextFile("videos.txt");
+    document.getElementById("videoData").src = "https://img.shields.io/badge/Videos-" + outp + "-informational";
+
+    const key = "Vm0wd2QyVkhVWGhUV0d4VFlteEtXRmxVU2xOWFZsbDNXa1JTVjFKc2JETlhhMk0xWVd4S2MxWnFUbGROYWtaSVZqQmFTMlJIVmtsalJtUlhUVEpvZVZkV1pEUlpWMUpYVW01S2FsSnVRbTlaV0hCWFpWWmFjMVp0UmxkTlZuQlhWRlpXVjJGSFZuRlJWR3M5";
+
+    function getParam(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    if(getParam("key") != key) {
+        document.getElementById("dba").classList.remove("dbahidden");
+        document.getElementById("db").classList.remove("dbhidden");
+        
+        document.getElementById("dba").classList.add("dbashown")
+        document.getElementById("db").classList.add("dbshown");
+    }
+
+    function submitPassword() {
+        if(document.getElementById("authpassword").value == atob(atob(atob(atob(atob(atob(atob(atob(atob(atob(key))))))))))) {
+            document.getElementById("dba").classList.add("dbahidden");
+            document.getElementById("db").classList.add("dbhidden");
+            
+            document.getElementById("dba").classList.remove("dbashown")
+            document.getElementById("db").classList.remove("dbshown");
+            window.location.href = window.location.href + "&key=" + key;
+            document.getElementById("linkI").href = "index.html?key=" + key;
+        } else {
+            document.getElementById("authbutton").value = "Wrong!";
+            setTimeout(function() { document.getElementById("authbutton").value = "Submit"; }, 1000);
+        }
+    }
+</script>
 </html>
