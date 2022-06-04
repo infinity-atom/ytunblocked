@@ -18,4 +18,4 @@ Channels in <b>bold</b> have not been added to the credits on the website.
 <br>
 <br>
 <img src="assets/ytimg.png" height="40"><br>
-YoutubeUnblocked by InfinityAtom / Leonard J. <b>Code</b> is protected under
+YoutubeUnblocked by InfinityAtom / Leonard J. The <b>Code</b> is protected under the Creative Commons Attribution-NoDerivs 3.0 Unported (CC BY-ND 3.0)
