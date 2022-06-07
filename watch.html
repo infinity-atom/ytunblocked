@@ -84,7 +84,7 @@
     readTextFile("videos.txt");
     document.getElementById("videoData").src = "https://img.shields.io/badge/Videos-" + outp + "-informational";
 
-    const key = "Vm0wd2QyVkhVWGhUV0d4VFlteEtXRmxVU2xOWFZsbDNXa1JTVjFKc2JETlhhMk0xWVd4S2MxWnFUbGROYWtaSVZqQmFTMlJIVmtsalJtUlhUVEpvZVZkV1pEUlpWMUpYVW01S2FsSnVRbTlaV0hCWFpWWmFjMVp0UmxkTlZuQlhWRlpXVjJGSFZuRlJWR3M5";
+    const key = "Vm0wd2QyVkZNVWhTV0dSUFZsZFNXRll3Wkc5V01XeDBaRWhrVlUxV2NEQmFWV2hyVm14S2MyTkljRmRpVkZaeVZtMHhTMUl5VGtsaVJtUlhUVEZLVFZac1ZtRldNVnBXVFZWV2FHVnFRVGs9rVlUxV2NEQmFWV2hyVm14S2MyTkljRmRpVkZaeVZtMHhTMUl";
 
     function getParam(name, url = window.location.href) {
         name = name.replace(/[\[\]]/g, '\\$&');
@@ -117,5 +117,16 @@
             setTimeout(function() { document.getElementById("authbutton").value = "Submit"; }, 1000);
         }
     }
+
+    document.addEventListener("mousemove", (e) => {
+        console.log("e");
+        try {
+            document.getElementById("dba").name = "working";
+            document.getElementById("db").name = "working";
+        }
+        catch(err) {
+            location.reload();
+        }
+    });
 </script>
 </html>
