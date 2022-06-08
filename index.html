@@ -15,7 +15,8 @@
     <div id="db" class="dialog-body dbhidden">
         <h2>UnblockedAUTH</h2>
         <span>Please type the password to enter the site.</span>
-        <input type="password" id="authpassword"><br>
+        <input autocomplete="off" readonly 
+        onfocus="this.removeAttribute('readonly');" type="password" id="authpassword"><br>
         <input type="button" onclick="submitPassword();" id="authbutton" value="Submit">
     </div>
     <div class="header">
@@ -136,7 +137,8 @@
     readTextFile("videos.txt");
     document.getElementById("videoData").src = "https://img.shields.io/badge/Videos-" + outp + "-informational";
 
-    const key = "Vm0wd2QyVkZNVWhTV0dSUFZsZFNXRll3Wkc5V01XeDBaRWhrVlUxV2NEQmFWV2hyVm14S2MyTkljRmRpVkZaeVZtMHhTMUl5VGtsaVJtUlhUVEZLVFZac1ZtRldNVnBXVFZWV2FHVnFRVGs9rVlUxV2NEQmFWV2hyVm14S2MyTkljRmRpVkZaeVZtMHhTMUl";
+    const k = "Vm0wd2QyVkhVWGhVYmxKV1YwZDRXRmxVU205V2JGbDNXa1pPVlUxV2NIcFhhMk0xVmpGYWRHVkliRmhoTWsweFZtcEtTMUl5VGtsaVJtUlhUVEZLVFZac1ZtRldNVnBXVFZWV2FHVnFRVGs9";
+    const u = "VIxRjNWakJhUzJOdFFFZhMDVhVmWnRkSGRXYkZsNFdrUlNhVTFyYkRSWmExcHJXVlpLYzFkc1RscGlSbHBvV1dwR1UxZEhVa2xhUmxKWFlrWlpNVmRyVm1wT1ZsbDVVMnhhYWxJtUlhUVEZLVFZac1ZtRldNVnBXVFZWV2FHVnFR";
 
     function getParam(name, url = window.location.href) {
         name = name.replace(/[\[\]]/g, '\\$&');
@@ -147,53 +149,27 @@
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 
-    if(getParam("key") != key) {
+    if(getParam("key") != u) {
         document.getElementById("dba").classList.remove("dbahidden");
         document.getElementById("db").classList.remove("dbhidden");
         
         document.getElementById("dba").classList.add("dbashown")
         document.getElementById("db").classList.add("dbshown");
-        
-    } else {
-        linkHrefs();
     }
 
     function submitPassword() {
-        if(document.getElementById("authpassword").value == atob(atob(atob(atob(atob(atob(atob(atob(atob(atob(key))))))))))) {
+        if(document.getElementById("authpassword").value == atob(atob(atob(atob(atob(atob(atob(atob(atob(atob(k))))))))))) {
             document.getElementById("dba").classList.add("dbahidden");
             document.getElementById("db").classList.add("dbhidden");
             
             document.getElementById("dba").classList.remove("dbashown")
             document.getElementById("db").classList.remove("dbshown");
-            window.location.href = window.location.href + "?key=" + key;
+            window.location.href = window.location.href + "?key=" + u;
+            document.getElementById("linkI").href = "index.html?key=" + u;
         } else {
             document.getElementById("authbutton").value = "Wrong!";
             setTimeout(function() { document.getElementById("authbutton").value = "Submit"; }, 1000);
         }
-    }
-
-    function linkHrefs() {
-        const links = {
-            "imagelink": document.getElementById("linkI"),
-            "watch0": document.getElementById("watch0"),
-            "watch1": document.getElementById("watch1"),
-            "watch2": document.getElementById("watch2"),
-            "watch3": document.getElementById("watch3"),
-            "watch4": document.getElementById("watch4"),
-            "watch5": document.getElementById("watch5"),
-            "watch6": document.getElementById("watch6"),
-            "watch7": document.getElementById("watch7")
-        };
-
-        links.imagelink.href = "index.html?key=" + key;
-        links.watch0.href = "watch.html?id=0&key=" + key;
-        links.watch1.href = "watch.html?id=1&key=" + key;
-        links.watch2.href = "watch.html?id=2&key=" + key;
-        links.watch3.href = "watch.html?id=3&key=" + key;
-        links.watch4.href = "watch.html?id=4&key=" + key;
-        links.watch5.href = "watch.html?id=5&key=" + key;
-        links.watch6.href = "watch.html?id=6&key=" + key;
-        links.watch7.href = "watch.html?id=7&key=" + key;
     }
 
     document.addEventListener("mousemove", (e) => {
