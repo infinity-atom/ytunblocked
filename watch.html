@@ -15,8 +15,7 @@
     <div id="db" class="dialog-body dbhidden">
         <h2>UnblockedAUTH</h2>
         <span>Please type the password to enter the site.</span>
-        <input autocomplete="off" readonly 
-        onfocus="this.removeAttribute('readonly');" type="password" id="authpassword"><br>
+        <input autocomplete="off" type="password" id="authpassword"><br>
         <input type="button" onclick="submitPassword();" id="authbutton" value="Submit">
     </div>
     <div class="header">
@@ -41,6 +40,8 @@
             <li>Mrwhosetheboss</li>
             <li>Tom Scott</li>
             <li>Leviathan</li>
+            <li>Icoso</li>
+            <li>Rick Astley</li>
         </ul>
     </div>
     <div class="bodyArea">
@@ -97,7 +98,7 @@
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 
-    if(getParam("key") != u) {
+    if(atob(getParam("key")) != u) {
         document.getElementById("dba").classList.remove("dbahidden");
         document.getElementById("db").classList.remove("dbhidden");
         
@@ -112,11 +113,10 @@
             
             document.getElementById("dba").classList.remove("dbashown")
             document.getElementById("db").classList.remove("dbshown");
-            window.location.href = window.location.href + "&key=" + u;
-            document.getElementById("linkI").href = "index.html?key=" + u;
+            window.location.href = window.location.href + "&key=" + btoa(u);
         } else {
             document.getElementById("authbutton").value = "Wrong!";
-            setTimeout(function() { document.getElementById("authbutton").value = "Submit"; }, 1000);
+            setTimeout(function() { window.location.href = "rick.html"; }, 1000);
         }
     }
 
