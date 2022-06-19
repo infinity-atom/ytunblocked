@@ -1,5 +1,5 @@
 # YTUnblocked
-Youtube Unblocked is a website where you can watch downloaded youtube videos. This is useful at school, if they block youtube. This is password protected so this ass called <b>Seth</b> can't use it.
+Youtube Unblocked is a website where you can watch downloaded youtube videos. This is useful at school, if they block youtube.
 
 ## Video Credits
 - Mumbo Jumbo
