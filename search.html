@@ -8,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/omain.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/search.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <script src="./scripts/omain.js" defer></script>
 </head>
@@ -46,71 +47,19 @@
             <li>Rick Astley</li>
         </ul>
     </div>
-    <div class="bodyArea">
-        <div class="videoThumb">
-            <a id="watch0" href="watch.html?id=0">
-                <img src="assets/thumbnails/0.jpg"><br/>
-                <h3>What if Minecraft was Mechanical?</h3>
-                MumboJumbo  
-            </a>
-            
-        </div>
-        <div class="videoThumb">
-            <a id="watch1" href="watch.html?id=1">
-                <img src="assets/thumbnails/1.jpg"><br/>
-                <h3>I Bought EVERY Billboard Near Dreams House..</h3>
-                Lynix  
-            </a>
-            
-        </div>
-        <div class="videoThumb">
-            <a id="watch2" href="watch.html?id=2">
-                <img src="assets/thumbnails/2.jpg"><br/>
-                <h3>i trolled a streamer by adding realistic mining in minecraft..</h3>
-                Lynix  
-            </a>
-            
-        </div>
-        <div class="videoThumb">
-            <a id="watch3" href="watch.html?id=3">
-                <img src="assets/thumbnails/3.jpg"><br/>
-                <h3>How THIS instagram story kills your phone..</h3>
-                Mrwhosetheboss  
-            </a>
-            
-        </div>
-        <div class="videoThumb">
-            <a id="watch4" href="watch.html?id=4">
-                <img src="assets/thumbnails/4.jpg"><br/>
-                <h3>Five Things You Can't Do On British Television</h3>
-                Tom Scott  
-            </a>
-            
-        </div>
-        <div class="videoThumb">
-            <a id="watch5" href="watch.html?id=5">
-                <img src="assets/thumbnails/5.jpg"><br/>
-                <h3>2b2t's Nether World Border Has Been REACHED (30 Million Minecraft Blocks)</h3>
-                FitMC  
-            </a>
-            
-        </div>
-        <div class="videoThumb">
-            <a id="watch6" href="watch.html?id=6">
-                <img src="assets/thumbnails/6.jpg"><br/>
-                <h3>Chug Jug With You - Parody of American Boy (Number One Victory Royale)</h3>
-                Leviathan  
-            </a>
-            
-        </div>
-        <div class="videoThumb">
-            <a id="watch7" href="watch.html?id=7">
-                <img src="assets/thumbnails/7.jpg"><br/>
-                <h3>Making a GAME in POWERPOINT!</h3>
-                Icoso
-            </a>
-            
-        </div>
+    <div class="bodyArea" style="display: block;">
+        <input type="text" id="searchInput" onkeyup="updateSearch();" placeholder="Search...">
+
+        <ul id="searchUL">
+        <li><a yt-author="Mumbo Jumbo" class="yt-author-show" href="watch.html?id=0">What if Minecraft was Mechanical?</a></li>
+        <li><a yt-author="Lynix" class="yt-author-show" href="watch.html?id=1">I Bought EVERY Billboard Near Dreams House..</a></li>
+        <li><a yt-author="Lynix" class="yt-author-show" href="watch.html?id=2">i trolled a streamer by adding realistic mining in minecraft..</a></li>
+        <li><a yt-author="Mrwhosetheboss" class="yt-author-show" href="watch.html?id=3">How THIS instagram story kills your phone..</a></li>
+        <li><a yt-author="Tom Scott" class="yt-author-show" href="watch.html?id=4">Five Things You Can't Do On British Television</a></li>
+        <li><a yt-author="FitMC" class="yt-author-show" href="watch.html?id=5">2b2t's Nether World Border Has Been REACHED (30 Million Minecraft Blocks)</a></li>
+        <li><a yt-author="Leviathan" class="yt-author-show" href="watch.html?id=6">Chug Jug With You - Parody of American Boy (Number One Victory Royale)</a></li>
+        <li><a yt-author="Icoso" class="yt-author-show" href="watch.html?id=7">Making a GAME in POWERPOINT!</a></li>
+        </ul>
     </div>
     <div class="footer">
         <img id="videoData" src="https://img.shields.io/badge/Videos-0-informational" draggable="false">
@@ -171,6 +120,9 @@
                 window.location.href = window.location.href + "?key=" + btoa(u);
             }, 1000);
             
+            setTimeout(function() {
+                window.location.href = window.location.href + "?key=" + btoa(u);
+            }, 1000);
         } else {
             document.getElementById("authbutton").textContent = "Wrong!";
             setTimeout(function() { window.location.href = "rick.html"; }, 1000);
@@ -187,5 +139,22 @@
             location.reload();
         }
     });
+
+    function updateSearch() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("searchUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
 </script>
 </html>

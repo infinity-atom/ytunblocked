@@ -5,10 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playing Video - YTUnblocked</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/omain.css">
     <link rel="stylesheet" href="./styles/watch.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <script src="./scripts/omain.js"></script>
+    <script defer>
+        function showMenu() {
+            var menu = document.getElementById("menuObj");
+            
+            if(menu.style.display == "none") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="dba" class="dialog-background dbahidden"></div>
@@ -16,7 +27,7 @@
         <h2>UnblockedAUTH</h2>
         <span>Please type the password to enter the site.</span>
         <input autocomplete="off" type="password" id="authpassword"><br>
-        <input type="button" onclick="submitPassword();" id="authbutton" value="Submit">
+        <button onclick="submitPassword();" id="authbutton" class="ripple-button">Submit</button>
     </div>
     <div class="header">
         <div class="header-infobutton" onclick="showMenu();">
@@ -113,9 +124,12 @@
             
             document.getElementById("dba").classList.remove("dbashown")
             document.getElementById("db").classList.remove("dbshown");
-            window.location.href = window.location.href + "&key=" + btoa(u);
+            document.getElementById("linkI").href = "index.html?key=" + btoa(u);
+            setTimeout(function() {
+                window.location.href = window.location.href + "?key=" + btoa(u);
+            }, 1000);
         } else {
-            document.getElementById("authbutton").value = "Wrong!";
+            document.getElementById("authbutton").textContent = "Wrong!";
             setTimeout(function() { window.location.href = "rick.html"; }, 1000);
         }
     }

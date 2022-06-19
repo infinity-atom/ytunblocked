@@ -141,21 +141,62 @@ body {
     border-radius: 3px;
 }
 
-#authbutton {
-    padding: 5px;
-    background-color: black;
-    color: white;
-    margin-top: 5px;
-    border: 1px solid white;
-    border-radius: 3px;
-}
-
-#authbutton:hover {
-    padding: 5px;
-    background-color: rgb(27, 27, 27);
-    color: white;
-    margin-top: 5px;
-    border: 1px solid white;
-    border-radius: 3px;
+.ripple-button {
+    display: inline-grid;
+    place-items: center;
+    position: relative;
+    isolation: isolate;
+    appearance: none;
     cursor: pointer;
+    font-size: 1em;
+    padding: 0.5em 1.50em;
+    margin-top: 1em;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: hsl(200 100% 65%);
+    border: 1px solid currentColor;
+    border-radius: 0.25em;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+  }
+  
+  .ripple-button::before {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 750ms;
+    z-index: -1;
+    width: 150%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+  }
+  
+  .pulse::before {
+    animation: pulse 500ms;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0;
+    }
+  }
+
+.unlisted-tag::before {
+    content: "YTUB Unlisted";
+    font-size: 10pt;
+    margin-left: 10px;
+    padding: 3px;
+    background-color: rgb(69, 69, 69);
+    border-radius: 5px;
+    color: white;
+    vertical-align: middle;
 }
