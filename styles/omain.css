@@ -58,21 +58,6 @@ body {
     z-index: 10000;
 }
 
-#searchBox {
-    height: fit-content;
-    padding: 6px;
-    padding-left: 32px;
-    width: 45%;
-    background-color: var(--background-color-3);
-    border: 1px solid var(--foreground-color);
-    border-radius: 3px;
-    margin-top: 12px;
-    color: var(--foreground-color);
-    background-image: url("/assets/icons/search.png");
-    background-position: 3px 3px;
-    background-repeat: no-repeat;
-}
-
 .header-button {
     background-color: var(--background-color);
     height: fit-content;
