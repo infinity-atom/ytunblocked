@@ -8,8 +8,10 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/omain.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/search.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <script src="./scripts/omain.js" defer></script>
+    <script src="./scripts/search.js" defer></script>
 </head>
 <body>
     <div id="dba" class="dialog-background dbahidden"></div>
@@ -33,10 +35,13 @@
         <button onclick="window.location.href='search.html'" class="ripple-button">Search</button>
         <h2>YoutubeUNBLOCKED</h2>
         By InfinityAtom
-        </ul>
     </div>
-    <div class="bodyArea">
+    <div class="bodyArea" style="display: block;">
+    <input id="searchBox" class="searchBox" type="text" placeholder="Search" onchange="search(this.value);">
+    <br>
+    <div id="searchResults">
 
+    </div>
     </div>
 </body>
 </html>

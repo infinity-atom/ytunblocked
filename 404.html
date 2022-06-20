@@ -4,24 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YTUnblocked</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Playing Video - YTUnblocked</title>
     <link rel="stylesheet" href="./styles/omain.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/404.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <script src="./scripts/omain.js" defer></script>
 </head>
 <body>
-    <div id="dba" class="dialog-background dbahidden"></div>
-    <div id="db" class="dialog-body dbhidden">
-        <h2>UnblockedAUTH</h2>
-        <span>Please type the password to enter the site.</span>
-        <input autocomplete="off" type="password" id="authpassword"><br>
-        <button onclick="submitPassword();" id="authbutton" class="ripple-button">Submit</button>
-    </div>
     <div class="header">
         <div class="header-infobutton" onclick="showMenu();">
-            <img class="icon" src="assets/icons/menu.png" alt="menu" draggable="false">
+            <img class="icon" src="./assets/icons/menu.png" alt="menu" draggable="false">
         </div>
         <div style="padding-left: 32px;"></div>
         <a id="linkI" href="index.html">
@@ -33,10 +25,21 @@
         <button onclick="window.location.href='search.html'" class="ripple-button">Search</button>
         <h2>YoutubeUNBLOCKED</h2>
         By InfinityAtom
-        </ul>
     </div>
     <div class="bodyArea">
-
+      <h1 style="font-size: 40pt; margin: 0;">404</h1>
+      <h2 style="font-size: 30pt; margin: 0;"id="404sub">just go away</h2><br><br>
+      <button onclick="setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 1000);" class="ripple-button">Home</button>
     </div>
 </body>
+
+<script>
+    document.addEventListener("keydown", function(event) {
+        if(event.keyCode == 56) {
+            eval(atob("ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJzQwNHN1YicpLnRleHRDb250ZW50ID0gJ2p1c3QgZ28gYXdheSwgc2V0aCc="));
+        }
+    });
+</script>
 </html>
