@@ -1,16 +1,11 @@
 # YTUnblocked
 Youtube Unblocked is a website where you can watch downloaded youtube videos. This is useful at school, if they block youtube.
 
-## Video Credits
-- Mumbo Jumbo
-- Lynix
-- Mrwhosetheboss
-- Tom Scott
-- Leviathan
-- <b>Icoso</b>
+## How it works
+Search: use youtube api<br>
+Watch: youtube-dl with py?
 <br>
 <br>
-Channels in <b>bold</b> have not been added to the credits on the website.
 <br>
 <br>
 <br>
